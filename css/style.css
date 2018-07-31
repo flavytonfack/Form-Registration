@@ -11,7 +11,7 @@ body {
     text-align: center;
     margin-top: 50px;
     font-family: 'Dosis', sans-serif;
-    font-size: 25px;
+    font-size: 20px;
     letter-spacing: 1.4px;
 }
 
@@ -25,12 +25,48 @@ body {
 
 form {
     width: 800px;
-    height: 1000px;
-    margin-top: 100px;
+    height: 1100px;
+    background-color: #ffffff;
+    margin: 0 auto;
+    padding: 14px;
+    border: solid 2px #ffbfbf;
 
 }
 
-.form-group input:focus {
-    text-decoration: none;
-    outline: none;
+#map {
+    width: 100%;
+    height: 300px;
+    background-color: lightgray;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
