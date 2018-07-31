@@ -4,79 +4,77 @@ function validateForm() {
 
     //SELECTING ALL TEXT ELEMENTS
 
-    var firstName = document.forms['myForm']['FirstName'];
-    var lastName = document.forms['myForm']['LastName'];
-    var address = document.forms['myForm']['Address'];
-    var city = document.forms['myForm']['City'];
-    var state = document.forms['myForm']['State'];
-    var zip = document.forms['myForm']['Zip'];
-    var educationLevel = document.forms['myForm']['EducationLevel'];
-    var income = document.forms['myForm']['Income'];
-    var phoneNumber = document.forms['myForm']['PhoneNumber'];
-    var email = document.forms['myForm']['Email'];
-    var password = document.forms['myForm']['Password'];
-    var confirmPassword = document.forms['myForm']['ConfirmPassword'];
-    var checkbox = document.forms['myForm']['Checkbox'];
+    var firstname = document.forms['myForm']['firstname'];
+    var lastname = document.forms['myForm']['lastName'];
+    var address = document.forms['myForm']['address'];
+    var city = document.forms['myForm']['city'];
+    var state = document.forms['myForm']['state'];
+    var zip = document.forms['myForm']['zip'];
+    var education = document.forms['myForm']['education'];
+    var phone = document.forms['myForm']['phone'];
+    var email = document.forms['myForm']['email'];
+    var password = document.forms['myForm']['password'];
+    var confirmpassword = document.forms['myForm']['confirmpassword'];
+
 
 //SETTING ALL ERROR DISPLAY ELEMENTS
-    var firstName_Error = document.getElementById('FirstName_Error');
-    var lastName_Error = document.getElementById('LastName_Error');
-    var address_Error = document.getElementById('Address_Error');
-    var city_Error = document.getElementById('City_Error');
-    var state_Error = document.getElementById('State_Error');
-    var zip_Error = document.getElementById('Zip_Error');
-    var educationLevel_Error = document.getElementById('EducationLevel_Error');
-    var phoneNumber_Error = document.getElementById('PhoneNumber_Error');
-    var email_Error = document.getElementById('Email_Error');
-    var password_Error = document.getElementById('Password_Error');
-    var checkbox_Error = document.getElementById('Checkbox_Error');
+    var firstname_Error = document.getElementById('firstname_Error');
+    var lastname_Error = document.getElementById('lastname_Error');
+    var address_Error = document.getElementById('address_Error');
+    var city_Error = document.getElementById('city_Error');
+    var state_Error = document.getElementById('state_Error');
+    var zip_Error = document.getElementById('zip_Error');
+    var education_Error = document.getElementById('education_Error');
+    var phone_Error = document.getElementById('phone_Error');
+    var email_Error = document.getElementById('email_Error');
+    var password_Error = document.getElementById('password_Error');
+
 
 //SETTING ALL EVENT LISTENERS
 
-    firstName.addEventListener('blur', firstNameVerify, true);
-    lastName.addEventListener('blur', lastNameVerify, true);
+    firstname.addEventListener('blur', firstnameVerify, true);
+    lastname.addEventListener('blur', lastnameVerify, true);
     address.addEventListener('blur', addressVerify, true);
     city.addEventListener('blur', cityVerify, true);
     state.addEventListener('blur', stateVerify, true);
     zip.addEventListener('blur', zipVerify, true);
-    educationLevel.addEventListener('blur', educationLevelVerify, true);
-    phoneNumber.addEventListener('blur', phoneNumberVerify, true);
+    education.addEventListener('blur', educationVerify, true);
+    phone.addEventListener('blur', phoneVerify, true);
     email.addEventListener('blur', emailVerify, true);
     password.addEventListener('blur', passwordVerify, true);
-    checkbox.addEventListener('blur', checkboxVerify, true);
 
 
 
     //validate first name
-    if (firstName.value == "") {
-        firstName.style.border = "1px solid red";
-        firstName_Error.textContent = "First Name is required";
-        firstName.focus();
+    if (firstname.value == "") {
+        firstname.style.border = "1px solid red";
+        firstname.textContent = "First Name is required";
+        firstname.focus();
         return false;
     }
 
     //validate last name
-    if (lastName.value == "") {
-        lastName.style.border = "1px solid red";
-        lastName_Error.textContent = "Last Name is required";
-        lastName.focus();
+    if (lastname.value == "") {
+        lastname.style.border = "1px solid red";
+        lastname_Error.textContent = "Last Name is required";
+        lastname.focus();
         return false;
     }
 
 
     //validate first name length
-    if (firstName.value.length > 40) {
-        firstName.style.border = "1px solid red";
-        firstName_Error.textContent = "First Name must be up to 40 characters";
-        firstName.focus();
+    if (firstname.value.length > 40) {
+        firstname.style.border = "1px solid red";
+        firstname_Error.textContent = "First Name must be up to 40 characters";
+        firstname.focus();
         return false;
     }
 
     //validate last name length
-    if (lastName.value.length > 40 ) {
-        lastName.style.border = "1px solid red";
-        lastName_Error.textContent = "Last Name must be up to 40 characters";
-        lastName.focus();
+    if (lastname.value.length > 40 ) {
+        lastname.style.border = "1px solid red";
+        lastname_Error.textContent = "Last Name must be up to 40 characters";
+        lastname.focus();
         return false;
     }
 
@@ -150,15 +148,15 @@ function validateForm() {
 
 
     //validate education level
-    if (educationLevel.value == "") {
-        educationLevel.style.border = "1px solid red";
-        educationLevel_Error.textContent = "Education Level is required";
-        educationLevel.focus();
+    if (education.value == "") {
+        education.style.border = "1px solid red";
+        education_Error.textContent = "Education Level is required";
+        education.focus();
         return false;
     }
 
     //validate phone number
-    if (phoneNumber.value == "") {
+    if (phone.value == "") {
         phoneNumber.style.border = "1px solid red";
         phoneNumber_Error.textContent = "Phone number is required";
         phoneNumber.focus();
@@ -166,14 +164,12 @@ function validateForm() {
     }
 
     //validate phone number length
-    if (phoneNumber.length > 7) {
-        phoneNumber.style.border = "1px solid red";
-        phoneNumber_Error.textContent = "Phone number must be up to 7 digit numbers";
-        phoneNumber.focus();
+    if (phone.length > 7) {
+        phone.style.border = "1px solid red";
+        phone_Error.textContent = "Phone number must be up to 7 digit numbers";
+        phone.focus();
         return false;
-
     }
-
 
     //validate email
     if (email.value == "") {
@@ -192,10 +188,10 @@ function validateForm() {
         return false;
     }
 
-    //check if the two passowords match
-    if (password.value != confirmPassword.value) {
+    //check if the two passwords match
+    if (password.value != confirmpassword.value) {
         password.style.border = "1px solid red";
-        confirmPassword.style.border = "The two passowrds do not match";
+        confirmPassword.style.border = "The two passwords do not match";
         return false;
     }
 
@@ -204,19 +200,17 @@ function validateForm() {
 }
 
 
-
-
 //EVENT HANDLER FUNCTIONS
 
-function firstNameVerify() {
-    if (firstName.value != "") {
-        firstName.style.border = "1px solid #8ec127";
-        firstName_Error.innerHTML = "";
+function firstnameVerify() {
+    if (firstname.value != "") {
+        firstname.style.border = "1px solid #8ec127";
+        firstname_Error.innerHTML = "";
         return true;
     }
 }
 
-function lastNameVerify() {
+function lastnameVerify() {
     if (lastName.value != "") {
         lastName.style.border = "1px solid #8ec127";
         lastName_Error.innerHTML = "";
@@ -256,7 +250,7 @@ function zipVerify() {
     }
 }
 
-function educationLevelVerify() {
+function educationVerify() {
     if (educationLevel.value != "") {
         educationLevel.style.border = "1px solid #8ec127";
         educationLevel_Error.innerHTML = "";
@@ -264,7 +258,7 @@ function educationLevelVerify() {
     }
 }
 
-function phoneNumberVerify() {
+function phoneVerify() {
     if (phoneNumber.value != "") {
         phoneNumber.style.border = "1px solid #8ec127";
         phoneNumber_Error.innerHTML = "";
