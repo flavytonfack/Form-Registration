@@ -5,7 +5,7 @@ function validateForm() {
     //SELECTING ALL TEXT ELEMENTS
 
     var firstname = document.forms['myForm']['firstname'];
-    var lastname = document.forms['myForm']['lastName'];
+    var lastname = document.forms['myForm']['lastname'];
     var address = document.forms['myForm']['address'];
     var city = document.forms['myForm']['city'];
     var state = document.forms['myForm']['state'];
@@ -182,7 +182,7 @@ function validateForm() {
     //validate password
     if (password.value == "") {
         password.style.border = "1px solid red";
-        confirmPassword.style.border = "1px solid red";
+        confirmpassword.style.border = "1px solid red";
         password_Error.textContent = "Password is required";
         password.focus();
         return false;
@@ -191,7 +191,7 @@ function validateForm() {
     //check if the two passwords match
     if (password.value != confirmpassword.value) {
         password.style.border = "1px solid red";
-        confirmPassword.style.border = "The two passwords do not match";
+        confirmpassword.style.border = "The two passwords do not match";
         return false;
     }
 
@@ -203,11 +203,11 @@ function validateForm() {
 //EVENT HANDLER FUNCTIONS
 
 function firstnameVerify() {
-    if (firstname.value != "") {
+    // if (firstname.value != "") {
         firstname.style.border = "1px solid #8ec127";
         firstname_Error.innerHTML = "";
         return true;
-    }
+    // }
 }
 
 function lastnameVerify() {
@@ -282,7 +282,7 @@ function passwordVerify() {
         return true;
     }
 
-    if (password.value === confirmPassword.value) {
+    if (password.value === confirmpassword.value) {
         password.style.border = "1px solid #8ec127";
         password_Error.innerHTML = "";
         return true;
