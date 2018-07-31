@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+@import url('https://fonts.googleapis.com/css?family=Caveat');
+
+
+body {
+    font-size: 18px;
+    font-family: 'Dosis', sans-serif;
+}
+
+.header-title {
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Dosis', sans-serif;
+    font-size: 25px;
+    letter-spacing: 1.4px;
+}
+
+.header-title span {
+    font-family: 'Caveat', cursive;
+    font-size: 35px;
+    font-weight: 800;
+    color: #ffbfbf;
+
+}
+
+form {
+    width: 800px;
+    height: 1000px;
+    margin-top: 100px;
+
+}
+
+.form-group input:focus {
+    text-decoration: none;
+    outline: none;
+}

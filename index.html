@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Form Registration </title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/style.js"></script>
+
+</head>
+
+
+<body>
+
+<div class=" header-title col-md-12">
+    <p> CSC 642 Summer 2018 Individual Assignment <span>Flavy Tonfack</span> Registration form </p>
+</div>
+
+
+<form name="myForm" onsubmit="return validateForm()">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>First Name</label>
+            <input type="text" class="form-control" placeholder="Enter First Name" name="FirstName">
+            <div id="FirstName_Error"></div>
+        </div>
+
+        <div class="form-group col-md-6">
+            <label>Last Name</label>
+            <input type="text" class="form-control" placeholder="Enter Last Name" name="LastName">
+            <div id="LastName_Error"></div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Address</label>
+        <input type="text" class="form-control" placeholder="Enter Address" name="Address">
+        <div id="Address_Error"></div>
+    </div>
+
+    <div class="form-group">
+        <label>Address 2</label>
+        <input type="text" class="form-control" placeholder="Apartment, Studio, or floor" name="Address2">
+        <div id="Address2_Error"></div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>City</label>
+            <input type="text" class="form-control" name="City">
+            <div id="City_Error"></div>
+        </div>
+        <div class="form-group col-md-4">
+            <label>State</label>
+            <input type="text" class="form-control" name="State">
+            <div id="State_Error"></div>
+        </div>
+        <div class="form-group col-md-2">
+            <label>Zip</label>
+            <input type="text" class="form-control" name="Zip">
+            <div id="Zip_Error"></div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Education Level</label>
+        <input type="text" class="form-control" name="EducationLevel" placeholder="high school, college, graduate studies, Ph.D, or others">
+        <div id="EducationLevel_Error"></div>
+    </div>
+
+    <div class="form-group">
+        <label>Income (yearly)</label>
+        <select class="form-control">
+            <option>less than $50K</option>
+            <option>between $50K-100K</option>
+            <option>above $100K</option>
+        </select>
+    </div>
+
+
+    <div class=" form-row">
+        <div class="form-group col-md-6">
+            <label>Phone Number</label>
+            <input type="text" class="form-control" placeholder="Enter Phone Number" name="PhoneNumber">
+            <div id="PhoneNumber_Error"></div>
+        </div>
+
+        <div class="form-group col-md-6">
+            <label>E-mail</label>
+            <input type="email" class="form-control" placeholder="Enter E-mail" name="Email">
+            <div id="Email_Error"></div>
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control" placeholder="Password" name="Password">
+    </div>
+
+    <div class="form-group">
+        <label>Confirm Password</label>
+        <input type="password" class="form-control" placeholder="Confirm Password" name="ConfirmPassword">
+        <div id="Password_Error"></div>
+    </div>
+
+    <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" name="Checkbox">
+        <label class="form-check-label">I Agree to terms</label>
+        <div id="Checkbox_Error"></div>
+    </div>
+
+    <input type="submit">
+
+
+
+</form>
+
+
+
+</body>
+</html>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
