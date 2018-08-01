@@ -12,11 +12,13 @@ function validatefirstname(firstname, message) {
 
     if (firstname.value == "") {
         message.valueOf = "First Name is required";
+        document.getElementById('firstName').style.borderColor = "red";
         return false;
     }
 
     if (firstname.length > 40) {
         message.valueOf = "First Name must be at most 40 characters";
+        document.getElementById('lastName').style.borderColor = "red";
         return false;
     }
 
@@ -28,11 +30,13 @@ function validatelastname(lastname, message) {
 
     if (lastname.value == "") {
         message.valueOf = "Last Name is required";
+        document.getElementById('lastName').style.borderColor = "1red";
         return false;
     }
 
     if (lastname.length > 40) {
         message.valueOf = "Last Name must be at most 40 characters";
+        document.getElementById('lastName').style.borderColor = "red";
         return false;
     }
 
@@ -67,6 +71,8 @@ function validateForm(e) {
     //validate password
     if (password.value != confirmpassword.value) {
         addErrorMessage('password', 'Password does not match');
+        document.getElementById('password').style.borderColor = "red";
+        document.getElementById('confirmpassword').style.borderColor = "red";
         error = true;
     }
 
@@ -80,6 +86,7 @@ function validateForm(e) {
         removeErrorMessage('firstName');
     } else {
         addErrorMessage('firstName', 'Please enter your first name.');
+        document.getElementById('firstName>').style.borderColor = "red";
         error = true;
     }
 
@@ -88,6 +95,7 @@ function validateForm(e) {
         removeErrorMessage('lastName');
     } else {
         addErrorMessage('lastName', 'Please enter your last name.');
+        document.getElementById('lastName').style.borderColor = "red";
         error = true;
     }
 
@@ -96,6 +104,7 @@ function validateForm(e) {
         removeErrorMessage('email');
     } else {
         addErrorMessage('email', 'Please enter your email address.');
+        document.getElementById('email').style.borderColor = "red";
         error = true;
     }
 
@@ -107,7 +116,6 @@ function validateForm(e) {
         removeErrorMessage('firstName');
     }
     else {
-        //The username is not valid
         addErrorMessage('firstName', msg.valueOf);
         error = true;
     }
@@ -117,6 +125,7 @@ function validateForm(e) {
         removeErrorMessage('phone');
     } else {
         addErrorMessage('phone', 'Please enter your phone number.');
+        document.getElementById('phone').style.borderColor = "red";
         error = true;
     }
 
@@ -125,11 +134,13 @@ function validateForm(e) {
         removeErrorMessage('city');
     } else {
         addErrorMessage('city', 'Please enter your city.');
+        document.getElementById('city').style.borderColor = "red";
         error = true;
     }
 
     if (city.value > 40) {
         addErrorMessage('city', 'City must be up to 40 Characters');
+        document.getElementById('city').style.borderColor = "red";
         error = true;
     }
 
@@ -138,6 +149,7 @@ function validateForm(e) {
         removeErrorMessage('state');
     } else {
         addErrorMessage('state', 'Please select your state.');
+        document.getElementById('state').style.borderColor = "red";
         error = true;
     }
 
@@ -147,6 +159,7 @@ function validateForm(e) {
         removeErrorMessage('income');
     } else {
         addErrorMessage('income', 'Please select your income.');
+        document.getElementById('income').style.borderColor = "red";
         error = true;
     }
 
@@ -156,6 +169,7 @@ function validateForm(e) {
         removeErrorMessage('education');
     } else {
         addErrorMessage('education', 'Please select your education.');
+        document.getElementById('education').style.borderColor = "red";
         error = true;
     }
 
@@ -165,6 +179,7 @@ function validateForm(e) {
         removeErrorMessage('zip');
     } else {
         addErrorMessage('zip', 'Please enter your zip code.');
+        document.getElementById('zip').style.borderColor = "red";
         error = true;
     }
 
@@ -173,11 +188,14 @@ function validateForm(e) {
     //validate address
     if (address.value == "") {
         addErrorMessage('address','Please enter your address');
+        document.getElementById('address').style.borderColor = "red";
         error = true;
     }
 
     if (address.length > 40) {
-        addErrorMessage('address', 'Address must be up to 40 character')
+        addErrorMessage('address', 'Address must be up to 40 character');
+        document.getElementById('address').style.borderColor = "red";
+        error = true;
     }
 
 
